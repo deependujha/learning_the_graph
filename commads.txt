@@ -1,0 +1,15 @@
+npm install -g @graphprotocol/graph-cli
+
+graph init --contract-name RandomWinnerGame --product hosted-service GITHUB_USERNAME/Learnweb3  --from-contract YOUR_RANDOM_WINNER_GAME_CONTRACT_ADDRESS  --abi ./abi.json --network mumbai graph
+
+
+// For the deploy key, go to The Graph's Hosted Service, click on My Dashboard, copy the Access Token and paste it for the Deploy Key
+
+graph auth
+
+
+cd graph
+yarn deploy
+# or `npm run deploy`
+
+yarn codegen
